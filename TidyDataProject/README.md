@@ -1,6 +1,6 @@
 # REAME.md
 
-This README file describes the use of the run_analyis.R script to produce the tidy data file "Step5TidyData.txt" using the data from the experiments run by
+This README file describes the use of the run_analysis.R script to produce the tidy data file "Step5TidyData.txt" using the data from the experiments run by
 ----------
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
@@ -11,7 +11,7 @@ activityrecognition@smartlab.ws
 ----------
 ###  Files and Directory Setup
 
-Download and extract the ""UCI HAR Dataset"" data files into the current directory.
+Download and extract the "UCI HAR Dataset" data files into the current directory.
 Below are the initial folders and files that should be in the current directory for the run_analysis.R script to run properly
 
 		- 	test  --(directory containing the test data)
@@ -48,7 +48,7 @@ The **run_analysis.R** script is also located in the above directory. The final 
 1. rbind was used to merge the training dataset and test dataset
 2. The features dataset was used as the headers for their respective columns. The column headers were added using the form:  names(X_combine)<-features$V2
 3. Next we merged the activity labels (y\_train and y\_test) and labeled the column "activity"
-4. and merged the "subject number" (subject\_train, subject\_test) and labeled the column "subject"
+4. and merged the "subject" (subject\_train, subject\_test) and labeled the column "subject"
 5. Finally, we combined the 3 entities using cbind to obtain the combined dataset called "xcombine"
 6. To keep the R workspace tidy, we occasionally remove old datasets using the rm() command.
 
