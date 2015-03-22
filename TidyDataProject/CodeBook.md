@@ -46,7 +46,7 @@ Dimensions of the dataset :  180 objects , 68 variables
         1   "subject"
 			Type:  integer
 			Range:   1 - 30
-			This refers to the 30 volunteers.  Range: 
+			This refers to the 30 volunteers.
 
         2:  "activity"
 			Type:  chr
@@ -100,8 +100,9 @@ Dimensions of the dataset :  180 objects , 68 variables
        42   "tbodygyrojerkmagstd"
 
 ####Column 43 - 68 are ALL numeric
-            Starting with "f..." , these are FFT of the "t..." series above.  (note that not all of the "t..." series above are transformed.)
-            Please refer to features_info.txt for more information with repect to these parameters.
+            Starting with "f..." , these are FFT of the "t..." series above.
+            Note that not all of the "t..." series above are transformed.)
+            Please refer to features_info.txt for more information with respect to these parameters.
 
 
 	   43  "fbodyaccmeanx"
