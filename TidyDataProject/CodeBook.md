@@ -31,42 +31,104 @@ Here are the data for the project:
 		https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
-####Notes on the original (raw) data
+####Notes on the final tidy data set.
 
-This project uses primarily the following files from the above dataset to create an independent Tidy Dataset (file "Step5TidyData.txt" that is of the format:
+This project uses the above dataset to create an independent Tidy Dataset (file  "Step5TidyData.txt") using the run_analysis.R script.  Below is a sample view:
 
 ![sample](./xfinalCapture.PNG)
 
 
+Dimensions of the dataset :  180 objects , 68 variables
 
-
-Dimensions of the dataset
 Summary of the data
-Variables present in the dataset
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
 
-Variable 1 (repeat this section for all variables in the dataset)
+Column1 :  Label:  "subject"
+			Type:  integer
+			Range:   1 - 30
+			This refers to the 30 volunteers.  Range: 
 
-Short description of what the variable describes.
+Column2 :  Label:  "activity"
+			Type:  chr
+			Range: "laying" "sitting" "standing" "walking" "walking_downstairs" "walking_upstairs"
+
+ 
+
+Column 3-42 are ALL numeric
+       Starting with "t..." , these are all time domain signals.
+       Please refer to features_info.txt for more information with repect to these parameters.
+
+		3	"tbodyaccmeanx"    
+        4   "tbodyaccmeany"
+        5   "tbodyaccmeanz"          
+		6	"tbodyaccstdx"
+        7   "tbodyaccstdy" 
+        8   "tbodyaccstdz" 
+        9   "tgravityaccmeanx"
+       10   "tgravityaccmeany" 
+	   11   "tgravityaccmeanz" 
+       12   "tgravityaccstdx" 
+       13   "tgravityaccstdy"
+       14   "tgravityaccstdz"
+       15   "tbodyaccjerkmeanx"       
+	   16   "tbodyaccjerkmeany"
+       17   "tbodyaccjerkmeanz" 
+       18   "tbodyaccjerkstdx"
+       19   "tbodyaccjerkstdy" 
+       20   "tbodyaccjerkstdz" 
+	   21   "tbodygyromeanx"
+       22   "tbodygyromeany"
+       23   "tbodygyromeanz"
+       24   "tbodygyrostdx"
+       25   "tbodygyrostdy"           
+	   26   "tbodygyrostdz"
+       27   "tbodygyrojerkmeanx" 
+       28   "tbodygyrojerkmeany"
+       29   "tbodygyrojerkmeanz" 
+       30   "tbodygyrojerkstdx"       
+	   31   "tbodygyrojerkstdy"  
+       32   "tbodygyrojerkstdz"  
+       33   "tbodyaccmagmean"   
+       34   "tbodyaccmagstd"   
+       35   "tgravityaccmagmean"      
+       36   "tgravityaccmagstd"  
+       37   "tbodyaccjerkmagmean" 
+       38   "tbodyaccjerkmagstd" 
+       39   "tbodygyromagmean"  
+       40   "tbodygyromagstd"         
+       41   "tbodygyrojerkmagmean"  
+       42   "tbodygyrojerkmagstd"
+
+Column 43 - 68 are ALL numeric
+       Starting with "f..." , these are FFT of the "t..." series above.  (note that not all of the "t..." series above are transformed.)
+       Please refer to features_info.txt for more information with repect to these parameters.
+
+
+	   43  "fbodyaccmeanx"
+       44  "fbodyaccmeany"
+       45  "fbodyaccmeanz"           
+       46  "fbodyaccstdx"
+       47  "fbodyaccstdy"
+       48  "fbodyaccstdz"
+       49  "fbodyaccjerkmeanx"
+       50  "fbodyaccjerkmeany"       
+       51  "fbodyaccjerkmeanz"
+       52  "fbodyaccjerkstdx"
+       53  "fbodyaccjerkstdy"
+       54  "fbodyaccjerkstdz"
+       55  "fbodygyromeanx"          
+       56  "fbodygyromeany"
+       57  "fbodygyromeanz" 
+       58  "fbodygyrostdx"
+       59  "fbodygyrostdy" 
+       60  "fbodygyrostdz"           
+       61  "fbodyaccmagmean"   
+       62  "fbodyaccmagstd"  
+       63  "fbodybodyaccjerkmagmean"
+       64  "fbodybodyaccjerkmagstd" 
+       65  "fbodybodygyromagmean"    
+       66  "fbodybodygyromagstd"  
+       67  "fbodybodygyrojerkmagmean" 
+       68  "fbodybodygyrojerkmagstd" 
 
 
 
-Some information on the variable including:
-
-Class of the variable
-Unique values/levels of the variable
-Unit of measurement (if no unit of measurement list this as well)
-In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels).
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
-
-Notes on variable 1:
-
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
-
-Sources
-
-Sources you used if any, otherise leave out.
-
-Annex
-
-If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
