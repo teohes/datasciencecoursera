@@ -1,31 +1,44 @@
 # REAME.md
 
-The libraries used in this script are: **library(dplyr)** and **library(reshape2)**.
+This README file describes the use of the run_analyis.R script to produce the tidy data file Step5TidyData.txt using the data from the experiments run by
+----------
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
 
+----------
 ###  Files and Directory Setup
 
-Download and extract the ""UCI HAR Dataset"" data files into current directory.
-Below are the initial folders and files in the current directory
+Download and extract the ""UCI HAR Dataset"" data files into the current directory.
+Below are the initial folders and files that should be in the current directory
 
-		- 	test  --(directory)
-		- 	train --(directory)
-		- 	activity_labels
-		- 	features.txt
-		- 	features_info.txt
-		- 	README.txt
+		- 	test  --(directory containing the test data)
+		- 	train --(directory containing the training data)
+		- 	activity_labels.txt --(list the six activities and correcsponding code for each)
+		- 	features.txt --(lists the 561 features/variables collected/calculated)
+		- 	features_info.txt --(description of the feature selection)
+		- 	README.txt (Original file describing the above dataset)
 
 ##  run_analysis.R
 
-The file *run_analysis.R* is also located in the above directory. The final step of this script will produce the datafile  "Step5TidyData.txt" ( in the current directory).
+The file *run_analysis.R* is also located in the above directory. The final step of this script will produce the datafile  "Step5TidyData.txt" (in the current directory).
 
-###  Description of run_analysis.R*
 
-1.  Inspection of the X_train.txt (in the train directory above) and X_test.txt (in the test directory above) using both Notepad++ and also loading the files into R using read.tables show that they can be safely concatenated row-wise using rbind.
-2.  The 
+##  Description of run\_analysis.R
 
-2.  The concatenation of the data is always done by adding the test data to the bottom of the training set data for consistency.
 
-3.  STEP 1:  Merging the training dataset and test dataset
+### Note: The libraries used in this script are: **library(dplyr)** and **library(reshape2)**.
+1.  The data files were all read in using the following form:
+
+
+		dataset <-read.table("filename.txt",header=FALSE, stringsAsFactors=FALSE)
+2.  Inspection of the X\_train.txt (in the train directory above) and X\_test.txt (in the test directory above) using both Notepad++ and also loading the files into R using read.tables show that they can be safely concatenated row-wise using rbind.
+3.  The same applies for the y\_train, subject\_train and y\_test and subject\_test data.  They are similarly concatenated
+4.  The concatenation of the data is always done by adding the test data to the bottom of the training set data for consistency.
+5.  Merging the training dataset and test dataset (see STEP 1. in the run\_analysis.R )
+6.  
 
 
 
